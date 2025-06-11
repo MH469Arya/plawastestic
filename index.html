@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoRecycle - Plastic Waste Recycling Machine</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EcoRecycle</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#specs">Specifications</a></li>
+                <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transforming Plastic Waste Into Value</h1>
+            <p>Our innovative recycling machine converts plastic waste into reusable materials, helping build a sustainable future.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="process">
+        <h2>How Our Machine Works</h2>
+        <div class="process-steps">
+            <!-- Process steps here -->
+        </div>
+        <div class="video-container">
+            <template id="video-template">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/placeholder" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </template>
+            <!-- Video will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <h2>Environmental Benefits</h2>
+        <div class="benefits-container">
+            <div class="benefit-card">
+                <i class="fas fa-trash-alt"></i>
+                <h3>Reduces Landfill Waste</h3>
+                <p>Diverts plastic from landfills, reducing environmental pollution and land usage.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-water"></i>
+                <h3>Prevents Ocean Pollution</h3>
+                <p>Helps keep plastics out of our oceans, protecting marine life and ecosystems.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-leaf"></i>
+                <h3>Lowers Carbon Footprint</h3>
+                <p>Recycling plastic requires less energy than producing new plastic from raw materials.</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-recycle"></i>
+                <h3>Circular Economy</h3>
+                <p>Promotes a circular economy by turning waste into valuable resources.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section id="specs" class="specs">
+        <h2>Technical Specifications</h2>
+        <div class="specs-container">
+            <div class="specs-image">
+                <img src="assets/bottle.jpg" alt="Recycling Machine Specifications">
+            </div>
+            <div class="specs-details">
+                <div class="spec-item">
+                    <h3>Processing Capacity</h3>
+                    <p>Up to 100kg of plastic per hour</p>
+                </div>
+                <div class="spec-item">
+                    <h3>Plastic Types</h3>
+                    <p>PET, HDPE, LDPE, PP, PS, and more</p>
+                </div>
+                <div class="spec-item">
+                    <h3>Power Consumption</h3>
+                    <p>3.5 kWh, with energy-efficient operation</p>
+                </div>
+                <div class="spec-item">
+                    <h3>Dimensions</h3>
+                    <p>2.5m x 1.8m x 2.0m (L x W x H)</p>
+                </div>
+                <div class="spec-item">
+                    <h3>Output</h3>
+                    <p>Plastic flakes, pellets, or filament depending on configuration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases">
+        <h2>Real-World Applications</h2>
+        <div class="cases-container">
+            <div class="case-card">
+                <div class="case-icon"><i class="fas fa-building"></i></div>
+                <img src="images/community-center.jpg" alt="Community Recycling Center">
+                <h3>Community Centers</h3>
+                <p>Empowering local communities to manage their plastic waste and create value.</p>
+            </div>
+            <div class="case-card">
+                <div class="case-icon"><i class="fas fa-industry"></i></div>
+                <img src="images/manufacturing.jpg" alt="Manufacturing Facility">
+                <h3>Manufacturing Facilities</h3>
+                <p>Helping manufacturers reduce waste and create circular production systems.</p>
+            </div>
+            <div class="case-card">
+                <div class="case-icon"><i class="fas fa-water"></i></div>
+                <img src="images/coastal-areas.jpg" alt="Coastal Area">
+                <h3>Coastal Areas</h3>
+                <p>Tackling beach and ocean plastic pollution at the source.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Statistics -->
+    <section class="impact">
+        <h2>Our Impact</h2>
+        <div class="stats-container">
+            <div class="stat-box">
+                <i class="fas fa-weight-hanging"></i>
+                <span class="counter" data-target="5000">0</span>
+                <p>Tons of Plastic Recycled</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-globe-americas"></i>
+                <span class="counter" data-target="25">0</span>
+                <p>Countries Using Our Machines</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-industry"></i>
+                <span class="counter" data-target="350">0</span>
+                <p>Machines Deployed</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-tree"></i>
+                <span class="counter" data-target="12000">0</span>
+                <p>CO₂ Tons Saved</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
+                <div class="testimonial-text">
+                    <p>"This machine has transformed our community's approach to plastic waste. We've created jobs and cleaned our environment."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div>
+                        <h4>Maria Rodriguez</h4>
+                        <p>Community Leader, Costa Rica</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-icon"><i class="fas fa-quote-left"></i></div>
+                <div class="testimonial-text">
+                    <p>"As a manufacturing company, we've reduced our waste disposal costs by 70% and created a new revenue stream from recycled materials."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-image">
+                        <i class="bi bi-person-circle"></i>
+                    </div>
+                    <div>
+                        <h4>John Smith</h4>
+                        <p>Operations Manager, TechPlastics Inc.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Green Street, Eco City, EC 12345</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-envelope"></i> info@ecorecycle.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>EcoRecycle</h3>
+                <p>Transforming plastic waste into value</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#benefits">Benefits</a></li>
+                    <li><a href="#specs">Specifications</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>Stay Updated</h4>
+                <p>Subscribe to our newsletter for the latest updates</p>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 EcoRecycle. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+
+
