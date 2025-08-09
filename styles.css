@@ -134,7 +134,7 @@ nav.scrolled {
 /* Enhanced Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('images/recycling-hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('assets/plasticwaste.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -532,7 +532,7 @@ nav.scrolled {
 /* Enhanced Impact Section */
 .impact {
     padding: 100px 5%;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/impact-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('assets/plasticwaste.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -767,11 +767,13 @@ nav.scrolled {
     border-radius: 50%;
     color: white;
     transition: all 0.3s ease;
+    font-size: 1.4rem;
 }
 
 .social-links a:hover {
     background-color: var(--primary-color);
     transform: translateY(-5px);
+    font-size: 1.6rem;
 }
 
 .contact-form {
@@ -1045,6 +1047,34 @@ footer::before {
         }
     }
 }
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+
+
 
 
 
