@@ -455,6 +455,331 @@ nav.scrolled {
     font-size: 1.2rem;
 }
 
+/* 3D Workshop Experience Section */
+.workshop-3d-section {
+    position: relative;
+    padding: 120px 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('assets/plasticwaste.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.workshop-3d-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(46, 204, 113, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    pointer-events: none;
+}
+
+.workshop-3d-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.workshop-3d-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.workshop-3d-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.workshop-3d-section h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.workshop-3d-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 60px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.experience-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 30px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(52, 152, 219, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-15px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.experience-card:hover::before {
+    opacity: 1;
+}
+
+.experience-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-card:hover .experience-icon {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 10px 30px rgba(46, 204, 113, 0.4);
+}
+
+.experience-icon i {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.experience-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.experience-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.workshop-3d-demo {
+    margin: 60px 0;
+}
+
+.demo-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.demo-preview {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 60px 40px;
+    margin-bottom: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.demo-preview:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
+}
+
+.preview-content i {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.demo-preview:hover .preview-content i {
+    transform: scale(1.1);
+    color: var(--accent-color);
+}
+
+.preview-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.preview-content p {
+    opacity: 0.9;
+}
+
+.workshop-3d-btn {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto;
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.workshop-3d-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.workshop-3d-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(46, 204, 113, 0.4);
+}
+
+.workshop-3d-btn:hover::before {
+    left: 100%;
+}
+
+.workshop-3d-btn i {
+    font-size: 1.3rem;
+}
+
+.transformation-steps {
+    margin-top: 80px;
+}
+
+.step-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.flow-step .step-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.flow-step:hover .step-icon {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.flow-step .step-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.flow-step span {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.flow-arrow {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+@media screen and (max-width: 768px) {
+    .workshop-3d-section h2 {
+        font-size: 2.2rem;
+    }
+    
+    .experience-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .step-flow {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .demo-preview {
+        padding: 40px 20px;
+    }
+    
+    .workshop-3d-btn {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}
+
 /* Enhanced Use Cases Section */
 .use-cases {
     padding: 100px 5%;
@@ -1072,3 +1397,67 @@ footer::before {
     border: none;
     border-radius: 15px;
 }
+
+/* Workshop Modal Styles */
+.workshop-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.workshop-modal.show {
+    opacity: 1;
+}
+
+.modal-content-workshop {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    margin: 2.5% auto;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.close-workshop {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-workshop:hover {
+    background: rgba(255, 0, 0, 0.7);
+    transform: scale(1.1);
+}
+
+#workshop-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+
+

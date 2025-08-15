@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Plastic Recycling Workshop</title>
+    <link rel="stylesheet" href="workshop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="workshop-content">
+        <div class="stage-container">
+            <div class="stage active" id="stage-1">
+                <h2>Stage 1: Plastic Waste Collection</h2>
+                <div class="stage-visual">
+                    <div class="plastic-items">
+                        <div class="plastic-item bottle" draggable="true">
+                            <i class="fas fa-wine-bottle"></i>
+                            <span>PET Bottle</span>
+                        </div>
+                        <div class="plastic-item bag" draggable="true">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Plastic Bag</span>
+                        </div>
+                        <div class="plastic-item container" draggable="true">
+                            <i class="fas fa-box"></i>
+                            <span>Container</span>
+                        </div>
+                    </div>
+                    <div class="collection-bin">
+                        <i class="fas fa-trash-alt"></i>
+                        <span>Drop plastic items here</span>
+                    </div>
+                </div>
+                <button class="next-stage-btn" disabled>Next Stage</button>
+            </div>
+
+            <div class="stage" id="stage-2">
+                <h2>Stage 2: Sorting & Cleaning</h2>
+                <div class="stage-visual">
+                    <div class="sorting-machine">
+                        <i class="fas fa-cogs"></i>
+                        <span>Automated Sorting</span>
+                    </div>
+                    <div class="cleaning-process">
+                        <i class="fas fa-tint"></i>
+                        <span>Cleaning Process</span>
+                    </div>
+                </div>
+                <button class="next-stage-btn">Next Stage</button>
+            </div>
+
+            <div class="stage" id="stage-3">
+                <h2>Stage 3: Shredding & Melting</h2>
+                <div class="stage-visual">
+                    <div class="shredder">
+                        <i class="fas fa-cut"></i>
+                        <span>Shredding</span>
+                    </div>
+                    <div class="melting-chamber">
+                        <i class="fas fa-fire"></i>
+                        <span>Melting</span>
+                    </div>
+                </div>
+                <button class="next-stage-btn">Next Stage</button>
+            </div>
+
+            <div class="stage" id="stage-4">
+                <h2>Stage 4: Product Formation</h2>
+                <div class="stage-visual">
+                    <div class="molding-machine">
+                        <i class="fas fa-hammer"></i>
+                        <span>Molding</span>
+                    </div>
+                    <div class="final-products">
+                        <div class="product">
+                            <i class="fas fa-chair"></i>
+                            <span>Furniture</span>
+                        </div>
+                        <div class="product">
+                            <i class="fas fa-th-large"></i>
+                            <span>Tiles</span>
+                        </div>
+                        <div class="product">
+                            <i class="fas fa-cube"></i>
+                            <span>Bricks</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="restart-btn">Restart Workshop</button>
+            </div>
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+            <div class="progress-steps">
+                <div class="step active">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+                <div class="step">4</div>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <h3>Did You Know?</h3>
+            <p id="info-text">Drag the plastic items into the collection bin to start the recycling process!</p>
+        </div>
+    </div>
+
+    <script src="workshop.js"></script>
+</body>
+
+</html>

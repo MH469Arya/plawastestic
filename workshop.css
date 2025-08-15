@@ -1,0 +1,336 @@
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --accent-color: #3498db;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.workshop-content {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.stage-container {
+    position: relative;
+    min-height: 400px;
+    margin-bottom: 30px;
+}
+
+.stage {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.stage.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stage h2 {
+    color: var(--dark-color);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.stage-visual {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+    min-height: 250px;
+}
+
+/* Stage 1 - Collection */
+.plastic-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.plastic-item {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: grab;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.plastic-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+}
+
+.plastic-item.dragging {
+    opacity: 0.5;
+    transform: scale(0.9);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.plastic-item.collected {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.plastic-item:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+}
+
+.plastic-item i {
+    font-size: 2rem;
+}
+
+.collection-bin {
+    background: var(--accent-color);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px dashed rgba(255, 255, 255, 0.5);
+    text-align: center;
+    min-width: 250px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.collection-bin.hover { /* Renamed from .drag-over to match JS */
+    background: var(--secondary-color);
+    border-color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(39, 174, 96, 0.5);
+}
+
+.collection-bin i {
+    font-size: 3rem;
+}
+
+/* Stage 2 - Sorting */
+.sorting-machine, .cleaning-process {
+    background: var(--warning-color);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 200px;
+    animation: pulse 2s infinite;
+}
+
+/* Stage 3 - Processing */
+.shredder, .melting-chamber {
+    background: var(--danger-color);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 200px;
+    animation: shake 1s infinite;
+}
+
+/* Stage 4 - Products */
+.molding-machine {
+    background: var(--secondary-color);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    min-width: 200px;
+}
+
+.final-products {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 120px;
+    animation: bounceIn 0.5s ease-out;
+    animation-delay: calc(var(--delay) * 0.2s);
+}
+
+.product:nth-child(1) { --delay: 1; }
+.product:nth-child(2) { --delay: 2; }
+.product:nth-child(3) { --delay: 3; }
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Buttons */
+.next-stage-btn, .restart-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.next-stage-btn:hover, .restart-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(46, 204, 113, 0.4);
+}
+
+.next-stage-btn:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Progress Bar */
+.progress-bar {
+    position: relative;
+    background: #ecf0f1;
+    height: 8px;
+    border-radius: 4px;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    height: 100%;
+    width: 25%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+}
+
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #bdc3c7;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.step.completed {
+    background: var(--secondary-color);
+}
+
+/* Info Panel */
+.info-panel {
+    background: var(--light-color);
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.info-panel h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+.info-panel p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .workshop-header h1 {
+        font-size: 2rem;
+    }
+    
+    .stage-visual {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .plastic-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .final-products {
+        justify-content: center;
+    }
+    
+    .progress-steps {
+        gap: 10px;
+    }
+    
+    .step {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+}

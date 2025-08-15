@@ -19,15 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Load video using template
-    if ("content" in document.createElement("template")) {
-        const videoContainer = document.querySelector('.video-container');
-        const template = document.querySelector('#video-template');
-        
-        const clone = template.content.cloneNode(true);
-        videoContainer.appendChild(clone);
-    }
-    
     // Statistics counter animation
     const counters = document.querySelectorAll('.counter');
     const speed = 200;
@@ -49,4 +40,39 @@ document.addEventListener('DOMContentLoaded', function() {
         
         updateCount();
     });
+
+    // 3D Workshop functionality - Fixed
+    const launch3DWorkshopBtn = document.getElementById('launch-3d-workshop');
+    console.log('Button found:', launch3DWorkshopBtn); // Debug log
+
+    if (launch3DWorkshopBtn) {
+        launch3DWorkshopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Workshop button clicked!');
+            
+            // Navigate to workshop.html
+            window.location.href = 'workshop.html';
+        });
+        
+        // Also add a backup click handler
+        launch3DWorkshopBtn.onclick = function(e) {
+            e.preventDefault();
+            console.log('Backup click handler triggered');
+            window.location.href = 'workshop.html';
+        };
+    } else {
+        console.error('Launch button not found!');
+    }
+
+    // Demo preview click handler
+    const demoPreview = document.querySelector('.demo-preview');
+    if (demoPreview) {
+        demoPreview.addEventListener('click', () => {
+            console.log('Demo preview clicked');
+            if (launch3DWorkshopBtn) {
+                launch3DWorkshopBtn.click();
+            }
+        });
+    }
 });
+
